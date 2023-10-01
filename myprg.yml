@@ -1,0 +1,21 @@
+---
+name: Installing the multiple servers
+hosts: database
+remote_user:ansible
+become: true
+tasks:
+- name: installing multiple packages
+  yum:
+   - httpd
+   - nfs-utils
+   - yum-utils
+   state: installed
+ - name: Starting the services
+   service:
+    name: 
+    - httpd
+    - nfs-utils
+    - yum-utils
+    state: present
+ ...
+  
