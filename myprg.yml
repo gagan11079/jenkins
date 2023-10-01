@@ -17,5 +17,6 @@ tasks:
     - nfs-utils
     - yum-utils
     state: present
+    #state: absent
  ...
   
